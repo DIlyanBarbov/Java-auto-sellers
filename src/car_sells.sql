@@ -1,20 +1,13 @@
---
--- Table structure for table car_sells
---
-
 CREATE TABLE IF NOT EXISTS car_sells
 (
     id            SERIAL,
-    car_id        varchar(50) NOT NULL,
-    buyer_name    int[11]     NOT NULL,
+    car_id        int NOT NULL,
+    buyer_name    varchar(50)     NOT NULL,
     buyer_contact varchar(20) NOT NULL,
     date_sold     timestamp   NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    FOREIGN KEY (car_id) references cars(id)
 );
-
---
--- Dumping data for table issuebooks
---
 
 INSERT INTO car_sells (car_id, buyer_name, buyer_contact, date_sold)
 VALUES (1, 'Ivaylo', '0899687934', '2021-06-19 11:43:16'),
