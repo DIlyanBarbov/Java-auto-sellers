@@ -1,4 +1,3 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -12,8 +11,7 @@ import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import java.sql.*;
+
 public class AdminSuccess extends JFrame {
 	static AdminSuccess frame;
 	private JPanel contentPane;
@@ -48,36 +46,36 @@ public class AdminSuccess extends JFrame {
 		lblAdminSection.setFont(new Font("Tahoma", Font.PLAIN, 22));
 		lblAdminSection.setForeground(Color.GRAY);
 		
-		JButton btnNewButton = new JButton("Add Librarian");
+		JButton btnNewButton = new JButton("Add Seller");
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			LibrarianForm.main(new String[]{});
+			SellerForm.main(new String[]{});
 			frame.dispose();
 			}
 		});
 		
-		JButton btnViewLibrarian = new JButton("View Librarian");
-		btnViewLibrarian.addActionListener(new ActionListener() {
+		JButton btnViewSeller = new JButton("View Seller");
+		btnViewSeller.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-			ViewLibrarian.main(new String[]{});
+			ViewSeller.main(new String[]{});
 			}
 		});
-		btnViewLibrarian.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnViewSeller.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		
-		JButton btnDeleteLibrarian = new JButton("Delete Librarian");
-		btnDeleteLibrarian.addActionListener(new ActionListener() {
+		JButton btnDeleteSeller = new JButton("Delete Seller");
+		btnDeleteSeller.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			DeleteLibrarian.main(new String[]{});
+			DeleteSeller.main(new String[]{});
 			frame.dispose();
 			}
 		});
-		btnDeleteLibrarian.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnDeleteSeller.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		
 		JButton btnLogout = new JButton("Logout");
 		btnLogout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Library.main(new String[]{});
+				AutoHaus.main(new String[]{});
 				frame.dispose();
 			}
 		});
@@ -93,8 +91,8 @@ public class AdminSuccess extends JFrame {
 					.addGap(134)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addComponent(btnLogout, GroupLayout.PREFERRED_SIZE, 181, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnDeleteLibrarian, GroupLayout.PREFERRED_SIZE, 181, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnViewLibrarian, GroupLayout.PREFERRED_SIZE, 181, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btnDeleteSeller, GroupLayout.PREFERRED_SIZE, 181, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btnViewSeller, GroupLayout.PREFERRED_SIZE, 181, GroupLayout.PREFERRED_SIZE)
 						.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 181, GroupLayout.PREFERRED_SIZE))
 					.addContainerGap(109, Short.MAX_VALUE))
 		);
@@ -105,9 +103,9 @@ public class AdminSuccess extends JFrame {
 					.addGap(11)
 					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
-					.addComponent(btnViewLibrarian, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)
+					.addComponent(btnViewSeller, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
-					.addComponent(btnDeleteLibrarian, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)
+					.addComponent(btnDeleteSeller, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addComponent(btnLogout, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap(21, Short.MAX_VALUE))

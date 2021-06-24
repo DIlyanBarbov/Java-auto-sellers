@@ -5,8 +5,8 @@ public class DB {
 	public static Connection getConnection(){
 		Connection con=null;
 		try{
-			Class.forName("com.mysql.jdbc.Driver");
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test","","");
+			Class.forName("org.postgresql.Driver");
+			con=DriverManager.getConnection("jdbc:postgresql://localhost:5432/dilyan","postgres","");
 		}catch(Exception e){System.out.println(e);}
 		return con;
 	}

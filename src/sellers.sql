@@ -1,7 +1,3 @@
---
--- Table structure for table `librarian`
---
-
 CREATE TABLE IF NOT EXISTS auto_seller
 (
     id       SERIAL,
@@ -13,10 +9,6 @@ CREATE TABLE IF NOT EXISTS auto_seller
     contact  varchar(20)   NOT NULL,
     PRIMARY KEY (id)
 );
-
---
--- Dumping data for table `librarian`
---
 
 INSERT INTO auto_seller (name, password, email, address, city, contact)
 VALUES ('dilyan', 'dilyanpass', 'dilyan@gmail.com', 'plovdiv', 'plovdiv', '0895123456'),
